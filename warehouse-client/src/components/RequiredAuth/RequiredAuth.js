@@ -3,6 +3,8 @@ import auth from '../../firebase.init';
 import { useAuthState, useSendEmailVerification,} from 'react-firebase-hooks/auth';
 import { Navigate, useLocation } from 'react-router-dom';
 import Loading from '../Loading/Loading';
+import { toast } from 'react-toastify';
+
 const RequiredAuth = ({children}) => {
     const[user,loading] = useAuthState(auth);
     const [sendEmailVerification] = useSendEmailVerification(auth);
@@ -19,7 +21,7 @@ const RequiredAuth = ({children}) => {
       <h3 className='text-danger'> your email is not verified!!</h3>
       <button onClick={ async () => {
           await sendEmailVerification();
-          alert('Sent email');
+         toast('Sent email');
         }}> verify email</button>
     </div>;
   }

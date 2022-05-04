@@ -4,6 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 const Registration = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -24,9 +25,9 @@ const Registration = () => {
     createUserWithEmailAndPassword(email,password);
   }
     return (
-        <div className='container'>
-            <h3>Register here</h3>
-        <Form className="container w-50 mx-auto p-5" onSubmit={handleCreateUser}>
+        <div className='container  w-50 mx-auto'>
+            <h3 className='text-center'>Register here</h3>
+        <Form className=" px-5" onSubmit={handleCreateUser}>
         <Form.Group className="mb-3" controlId="formGroupName">
           <Form.Label>Name</Form.Label>
           <Form.Control ref={nameRef}  type="text" placeholder="Enter name" />
@@ -45,6 +46,10 @@ const Registration = () => {
         <p>Already have an account?<span className='text-danger'><Link to='/login'>Login here</Link></span></p>
         <p style={{color:"red",marginLeft:"20px"}}>{error?.message }</p>
       </Form>
+      <div className=" px-5" >
+      <h6>OR</h6>
+     <SocialLogin/>
+      </div>
         </div>
     );
 };

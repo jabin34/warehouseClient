@@ -10,7 +10,8 @@ import Header from './components/Header/Header';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import NotFound from './components/NotFound/NotFound';
 import RequiredAuth from './components/RequiredAuth/RequiredAuth';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div >
@@ -25,6 +26,7 @@ function App() {
         <Route path="/registration" element={<Registration/>}/>
         <Route path="*" element={<NotFound/>}/>
     </Routes>
+    <ToastContainer/>
     </div>
   );
 }

@@ -3,11 +3,15 @@ import { Button, Form } from 'react-bootstrap';
 import './Login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { async } from '@firebase/util';
+import { toast } from 'react-toastify';
+import SocialLogin from '../SocialLogin/SocialLogin';
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [signInWithEmailAndPassword,user,loading, error, ] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
   const emailRef = useRef('');
   const passwordRef = useRef('');
  
@@ -23,10 +27,21 @@ const Login = () => {
     signInWithEmailAndPassword(email, password);
    
   }
+  const sendPasswordReset = async()=>{
+    const email = emailRef.current.value;
+    if(!email){
+      toast('Enter an email');
+    }
+    else{
+      await sendPasswordResetEmail(emailRef.current.value);
+      toast('Sent email');
+    }
+   
+  }
     return (
-      <div>
-        <h3>Login here</h3>
-        <Form className="container w-50 mx-auto p-5" onSubmit={handleLogin}>
+      <div className="container w-50 mx-auto p-1">
+        <h3 className='text-center'>Login here</h3>
+        <Form className=" px-5" onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formGroupEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control ref={emailRef} type="email" placeholder="Enter email" />
@@ -38,9 +53,17 @@ const Login = () => {
         <Button variant="primary" type="submit">
           Login
         </Button>
+        <p>Forgot password?<Button variant="link" onClick={() => {
+         sendPasswordReset();
+        }}>Reset Password</Button></p>
         <p>Don't have an account?<span className='text-danger'><Link to='/registration'>Register here</Link></span></p>
         <p style={{color:"red",marginLeft:"20px"}}>{error?.message }</p>
       </Form>
+      <div className=" px-5" >
+      <h6>OR</h6>
+     <SocialLogin/>
+      </div>
+      
       </div>
         
     );
