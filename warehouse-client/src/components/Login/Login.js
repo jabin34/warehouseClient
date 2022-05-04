@@ -41,7 +41,7 @@ const Login = () => {
     return (
       <div className="container w-50 mx-auto p-1">
         <h3 className='text-center'>Login here</h3>
-        <Form className=" px-5" onSubmit={handleLogin}>
+        <Form className="w-100 px-5" onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formGroupEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control ref={emailRef} type="email" placeholder="Enter email" />
