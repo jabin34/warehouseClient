@@ -92,16 +92,16 @@ const ItemDetails = () => {
         <div className="col-md-6">
           <Col>
             <Card>
-              <h4 className="text-center  text-bold ">Restock Item</h4>
-              <Stack direction="horizontal" gap={4}>
+              <h4 className="text-center  text-bold p-1 ">Restock Item</h4>
+              <Stack direction="horizontal" gap={4} className="p-2">
                 <Form.Control
                 ref ={qtyRef}
                 type="number"
-                  className="me-auto"
+                  className="me-auto p-1 w-75"
                   placeholder="Add your item here..."
                 />
                 <Button variant="secondary" onClick={()=>addQuantity()}>Add Quantity</Button>
-                <div className="vr" />
+                
                 {/* <Button variant="outline-danger">Reset</Button> */}
               </Stack>
             </Card>
