@@ -20,8 +20,8 @@ const Header = () => {
         <Navbar.Brand as={Link} to="/">
         <img
         src={logo}
-        width="80"
-        height="30"
+        width="120"
+        height="40"
         className="d-inline-block align-top"
         alt="car logo"
       />
@@ -29,10 +29,11 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/" >Home</Nav.Link>
-            <Nav.Link as={Link} to="/blogs">Blog</Nav.Link>
+           
           </Nav>
           <Nav>
+            <Nav.Link as={Link} to="/" >Home</Nav.Link>
+            <Nav.Link as={Link} to="/blogs">Blog</Nav.Link>
             <Nav.Link as={Link} to="/myitem">MyItem</Nav.Link>
             <Nav.Link as={Link} to="/manage">Manage Inventory</Nav.Link>
             {user?<Nav.Link onClick={logout}>Logout</Nav.Link>:<Nav.Link as={Link} to="/login">Login</Nav.Link>}
