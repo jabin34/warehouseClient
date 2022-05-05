@@ -4,7 +4,6 @@ import './Login.css';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { async } from '@firebase/util';
 import { toast } from 'react-toastify';
 import SocialLogin from '../SocialLogin/SocialLogin';
 const Login = () => {

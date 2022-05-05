@@ -1,9 +1,14 @@
 import React from 'react';
 import { Card, Col} from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './SingleInventory.css';
 const SingleInventory = ({item}) => {
+  const navigate = useNavigate();
   console.log(item);
-  const {name,img,desc,price,quantity,supplier} = item;
+  const {_id,name,img,desc,price,quantity,supplier} = item;
+  const inventoryDetails =(id)=>{
+   navigate(`inventory/${id}`);
+  }
     return (
       
       <Col >
@@ -19,7 +24,7 @@ const SingleInventory = ({item}) => {
              <li>Quantity:{quantity}</li>
              <li>Supplier:{supplier}</li>
            </ul>
-           <div className='btn-color border-0 p-1'>Update</div>
+           <div className='btn-color border-0 p-1' onClick={()=>{inventoryDetails(_id)}}>Update</div>
          </div>
          
         </Card.Body>

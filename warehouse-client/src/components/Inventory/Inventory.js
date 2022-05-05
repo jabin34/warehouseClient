@@ -3,7 +3,7 @@ import useInventory from '../../hooks/useInventory';
 import './Inventory.css';
 
 import SingleInventory from '../SingleInventory/SingleInventory';
-import { CardGroup, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 const Inventory = () => {
     const[data] = useInventory();
     return (
