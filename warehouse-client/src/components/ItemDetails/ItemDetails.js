@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button, Card, Col, Form, Stack } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
@@ -38,8 +38,27 @@ const ItemDetails = () => {
       .then((res) => res.json())
       .then((result) => console.log(result));
   };
+  const qtyRef = useRef(qty);
   const addQuantity = () =>{
-      
+     let addQty = qty;
+      if(!addQty){
+        addQty = 0;
+        
+      }
+
+    let newQty = parseInt(addQty) + parseInt(qtyRef.current.value);
+    //console.log(qtyadd);
+     setQty(newQty);
+    const url = `http://localhost:4000/inventory/${id}`;
+    fetch(url, {
+      method: "put",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ newQty}),
+    })
+      .then((res) => res.json())
+      .then((result) => console.log(result));
   }
   return (
     <div className="container p-5 mt-3">
@@ -76,6 +95,7 @@ const ItemDetails = () => {
               <h4 className="text-center  text-bold ">Restock Item</h4>
               <Stack direction="horizontal" gap={4}>
                 <Form.Control
+                ref ={qtyRef}
                 type="number"
                   className="me-auto"
                   placeholder="Add your item here..."
