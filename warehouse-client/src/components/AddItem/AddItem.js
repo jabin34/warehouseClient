@@ -39,7 +39,8 @@ const AddItem = () => {
  body: JSON.stringify(data),
  })
  .then(res=>res.json())
- .then(result=>{console.log(result);
+ .then(result=>{
+   //console.log(result);
     if(result.insertedId){
         toast('Item added Successfully!!!');
         e.target.reset();

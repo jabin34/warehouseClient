@@ -19,7 +19,7 @@ const ManageInventory = () => {
       })
         .then((res) => res.json())
         .then((result) => {
-          console.log("ok");
+          //console.log("ok");
           const remaining = data.filter((item) => item._id !== id);
           setData(remaining);
           toast('Item Deleted Successfully!!!')

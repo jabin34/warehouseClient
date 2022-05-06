@@ -6,6 +6,7 @@ import auth from '../../firebase.init';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import axios from 'axios';
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -18,13 +19,16 @@ const Login = () => {
   if(user){
     navigate(from,{replace:true});
 }
-  const handleLogin = (event) =>{
+  const handleLogin = async(event) =>{
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    console.log(email,password);
-    signInWithEmailAndPassword(email, password);
-   
+    //console.log(email,password);
+   await signInWithEmailAndPassword(email, password);
+   const {data} = await axios.post('http://localhost:4000/login',{email});
+   console.log(data);
+   localStorage.setItem('token',data.token);
+   navigate(from,{replace:true});
   }
   const sendPasswordReset = async()=>{
     const email = emailRef.current.value;

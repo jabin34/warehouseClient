@@ -21,7 +21,7 @@ const Registration = () => {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
-    console.log(name,email,password);
+    //console.log(name,email,password);
     createUserWithEmailAndPassword(email,password);
   }
     return (

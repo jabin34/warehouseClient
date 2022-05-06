@@ -26,7 +26,7 @@ const ItemDetails = () => {
     } else {
       setQty(newQty);
     }
-    console.log(newQty);
+    //console.log(newQty);
     const url = `http://localhost:4000/inventory/${id}`;
     fetch(url, {
       method: "put",
@@ -36,7 +36,7 @@ const ItemDetails = () => {
       body: JSON.stringify({ newQty }),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
+      .then((result) => console.log('result'));
   };
   const qtyRef = useRef(qty);
   const addQuantity = () =>{
@@ -58,7 +58,7 @@ const ItemDetails = () => {
       body: JSON.stringify({ newQty}),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
+      .then((result) => console.log('result'));
   }
   return (
     <div className="container p-5 mt-3">
