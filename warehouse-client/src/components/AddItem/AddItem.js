@@ -29,7 +29,7 @@ const AddItem = () => {
      "desc":desc,
      "img":img,
      "supplier":supplier,
-     'qty':qty
+     'quantity':qty
  };
  fetch('http://localhost:4000/inventory',{
  method:'post',
@@ -40,7 +40,11 @@ const AddItem = () => {
  })
  .then(res=>res.json())
  .then(result=>{console.log(result);
-   toast('Item added Successfully!!!')
+    if(result.insertedId){
+        toast('Item added Successfully!!!');
+        e.target.reset();
+    }
+   
 });
  
  }
