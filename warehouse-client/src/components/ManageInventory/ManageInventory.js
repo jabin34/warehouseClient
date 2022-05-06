@@ -2,9 +2,10 @@ import React from "react";
 import { Button, Table } from "react-bootstrap";
 import useInventory from "../../hooks/useInventory";
 import "./ManageInventory.css";
-import { FiPlusCircle, FiTrash2} from "react-icons/fi";
+import { FiPlusCircle} from "react-icons/fi";
 import { ImBin, ImCog } from "react-icons/im";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ManageInventory = () => {
   const [data,setData] = useInventory();
@@ -21,6 +22,7 @@ const ManageInventory = () => {
           console.log("ok");
           const remaining = data.filter((item) => item._id !== id);
           setData(remaining);
+          toast('Item Deleted Successfully!!!')
         });
     }
    }

@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 
 const AddItem = () => {
@@ -30,7 +31,18 @@ const AddItem = () => {
      "supplier":supplier,
      'qty':qty
  };
- console.log(data);
+ fetch('http://localhost:4000/inventory',{
+ method:'post',
+ headers:{
+    "content-type": "application/json",
+ },
+ body: JSON.stringify(data),
+ })
+ .then(res=>res.json())
+ .then(result=>{console.log(result);
+   toast('Item added Successfully!!!')
+});
+ 
  }
   return (
     <div className="container p-3 ">
