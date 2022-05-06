@@ -4,7 +4,8 @@
     "desc":"Jaguar’s first compact SUV is a unique combination of looks, agility and dynamic driving.",
     "price":2300,
     "quantity":4,
-    "supplier":" Hyundai Motor"
+    "supplier":" Hyundai Motor",
+    "email":"isratjabinesha@gmail.com"
 },
 {   
     "name":"AUDI NEW BOM 800",
@@ -12,7 +13,8 @@
     "desc":"The Audi RS Q8 has 1 Petrol Engine on offer. The Petrol engine is 3998 cc . It is available with Automatic transmission.",
     "price":2900,
     "quantity":7,
-    "supplier":"Daimler"
+    "supplier":"Daimler",
+    "email":"isratjabinesha@gmail.com"
 },
 {   
     "name":"MERCEDEZ BENZ EI8",
@@ -20,7 +22,8 @@
     "desc":"The BMW i8 was a plug-in hybrid sports car developed by BMW. The i8 was part of BMW's electrified fleet and was marketed under the BMW i sub-brand.",
     "price":2100,
     "quantity":5,
-    "supplier":"General Motors"
+    "supplier":"General Motors",
+    "email":"isratjabinesha@gmail.com"
 },
 {  
     "name":"AUDI A8 HYBRID",
@@ -28,7 +31,8 @@
     "desc":"Audi is offering the new A8 with three hybrid powertrain modes combined with eight-speed automatic transmission and quattro all-wheel drive. ",
     "price":1900,
     "quantity":6,
-    "supplier":"Ford Motor"
+    "supplier":"Ford Motor",
+    "email":"isratjabinesha@gmail.com"
 },
 {  
     "name":"BMW 8-Series 4-Door",
@@ -36,7 +40,8 @@
     "desc":"The 2023 BMW M8 Gran Coupe is the big, brash, and beautiful four-door member of the M8 family.",
     "price":3800,
     "quantity":3,
-    "supplier":"BMW Group"
+    "supplier":"BMW Group",
+    "email":"isratjabinesha@gmail.com"
 },
 {   
     "name":"AUDI NEW BOM 800",
@@ -44,6 +49,7 @@
     "desc":"Explore the full lineup of Audi Sport, SUVs, sedans, e-tron models & more. Build your own, search inventory and explore current special offers.",
     "price":2500,
     "quantity":2,
-    "supplier":"SAIC Motor"
+    "supplier":"SAIC Motor",
+    "email":"isratjabinesha@gmail.com"
 }
 ]
