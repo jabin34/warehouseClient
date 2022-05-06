@@ -7,6 +7,6 @@ useEffect(()=>{
     .then(res=>res.json())
     .then(item =>setData(item))
 },[]);
-return [data];
+return [data,setData];
 }
 export default useInventory;

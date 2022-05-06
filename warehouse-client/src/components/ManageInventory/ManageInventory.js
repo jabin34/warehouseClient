@@ -1,11 +1,26 @@
 import React from "react";
-import {OverlayTrigger, Table, Tooltip } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import useInventory from "../../hooks/useInventory";
 import "./ManageInventory.css";
 import { FiPlusCircle, FiTrash2} from "react-icons/fi";
 
 const ManageInventory = () => {
-    const [data] = useInventory();
+    const [data,setData] = useInventory();
+   const  handleDelete = (id) =>{
+     const proceed = window.confirm("Are you sure?");
+    if (proceed) {
+      const url = `http://localhost:4000/inventory/${id}`;
+      fetch(url, {
+        method: "delete",
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          console.log("ok");
+          const remaining = data.filter((item) => item._id !== id);
+          setData(remaining);
+        });
+    }
+   }
     let i=0;
   return (
     <div className="container p-1">
@@ -37,7 +52,7 @@ const ManageInventory = () => {
             <td>{item.supplier}</td>
             <td className="align-middle d-flex justify-content-around">
               <span className="p-2  border p-1 rounded"> <FiPlusCircle /></span>  
-              <span className="text-danger border p-2 rounded" onClick={()=>{handleDelete()}}><FiTrash2/></span>
+              <span className="text-danger border p-2 rounded" onClick={()=>{handleDelete(item._id)}}><FiTrash2/></span>
             </td>
           </tr>)}
           
