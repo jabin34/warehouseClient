@@ -1,5 +1,7 @@
 import React from 'react';
 import './Footer.css';
+import logo from'../../assets/carlogo.png';
+import {BsFacebook, BsGithub, BsGoogle, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 const Footer = () => {
     return (
      
@@ -15,22 +17,22 @@ const Footer = () => {
   
     <div>
       <a href="#" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
+       <BsFacebook/>
       </a>
       <a href="#" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
+        <BsTwitter/>
       </a>
       <a href="#" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
+        <BsGoogle/>
       </a>
       <a href="#" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
+        <BsInstagram/>
       </a>
       <a href="#" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
+        <BsLinkedin/>
       </a>
       <a href="#" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
+        <BsGithub/>
       </a>
     </div>
    
@@ -46,11 +48,16 @@ const Footer = () => {
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>CARNATION
+          <img
+        src={logo}
+        width="140"
+        height="50"
+        className="d-inline-block align-top"
+        alt="car logo"
+      />
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+          We  supply quality car and accessories to the general public and automotive industry.
           </p>
         </div>
        
@@ -62,16 +69,16 @@ const Footer = () => {
             Products
           </h6>
           <p>
-            <a href="#!" class="text-reset">Angular</a>
+            <a href="#!" class="text-reset">JAGUER M1 HYBRID</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">React</a>
+            <a href="#!" class="text-reset">AUDI NEW BOM 800</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vue</a>
+            <a href="#!" class="text-reset">MERCEDEZ BENZ EI8</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Laravel</a>
+            <a href="#!" class="text-reset">BMW 8-Series 4-Door</a>
           </p>
         </div>
        
@@ -89,7 +96,7 @@ const Footer = () => {
             <a href="#!" class="text-reset">Settings</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a href="#!" class="text-reset">Inventory</a>
           </p>
           <p>
             <a href="#!" class="text-reset">Help</a>

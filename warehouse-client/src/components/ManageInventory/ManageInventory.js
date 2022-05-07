@@ -32,11 +32,13 @@ const ManageInventory = () => {
     let i=0;
   return (
     <div className="container p-1">
-        <div className="d-flex justify-content-end pb-4 pt-2"><Button className="d-flex align-items-center justify-content-between" onClick={handleAddItem}><FiPlusCircle /><span className="px-2">Add Item</span></Button></div>
+      <h3 className="text-center">Manage Item</h3>
+        <div className="d-flex justify-content-end pb-4 pt-2">
+          <Button className="d-flex align-items-center justify-content-between bt-color border-0" onClick={handleAddItem}><FiPlusCircle /><span className="px-2">Add Item</span></Button></div>
         
       <Table responsive bordered hover rounded>
         <thead>
-          <tr className="">
+          <tr className="text-center">
             <th>No</th>
             <th>Image</th>
             <th>Name</th>
@@ -49,9 +51,9 @@ const ManageInventory = () => {
         </thead>
         <tbody className="fs-6 align-middle">
             { 
-            data.map(item=><tr key={data._id}>
+            data.map(item=><tr key={data._id} class="text-center">
             <td>{++i}</td>
-            <td className="">
+            <td >
             <img className="rounded-circle shadow-sm align-middle "
             src={item.img} alt="img" width={30} height={30} /></td>
             <td>{item.name}</td>

@@ -34,7 +34,8 @@ const MyItem = () => {
     },[user]);
     return (
         <div className='container'>
-           Myitem {item.length}
+            <h3 className='text-center p-4'>My Item :{item.length}</h3>
+         
            {
                item.map(data=> <Card className='m-2' body key={data._id}>
                    
@@ -49,7 +50,7 @@ const MyItem = () => {
                    </div>
                    </div>
                    
-                   <h4>${data.price}</h4>
+                   <h4 className='color'>${data.price}</h4>
                    
                    </div>
                    

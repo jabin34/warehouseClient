@@ -1,0 +1,7 @@
+.text-reset a{
+    color: white;
+}
+
+.text-reset:hover{
+color: chocolate;
+}

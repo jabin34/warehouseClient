@@ -3,7 +3,7 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import auth from "../../firebase.init";
-
+import { MdAddCircle } from "react-icons/md";
 const AddItem = () => {
   const [user] = useAuthState(auth);
   const nameRef = useRef('');
@@ -50,8 +50,9 @@ const AddItem = () => {
  
  }
   return (
-    <div className="container p-3 ">
-      <Form className="mt-5 w-50 mx-auto  max-vw-100" onSubmit={handleAddItem}>
+    <div className="container p-3 border mt-5 rounded shadow-sm ">
+      <h3 className="text-center">Add New Item</h3>
+      <Form className="mt-5 w-50 mx-auto  max-vw-100 " onSubmit={handleAddItem}>
         <Row className="mb-3">
           <Form.Group  controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
@@ -91,8 +92,8 @@ const AddItem = () => {
 
        
 
-        <Button variant="primary" type="submit">
-           Add
+        <Button  className="btn-color border-0 d-flex align-items-center justify-content-between px-5" type="submit">
+          <MdAddCircle></MdAddCircle><span>Add </span> 
         </Button>
       </Form>
     </div>
