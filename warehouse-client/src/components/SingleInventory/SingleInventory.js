@@ -21,7 +21,7 @@ const SingleInventory = ({item}) => {
           <h6 className='fw-bold border-2 p-2 border-bottom border-warning'>{name}</h6><span className='price'>${price}</span>
           </div>
           <div className='fw-light text-muted p-1 my-2 text-justify font-des'>{desc}</div>
-         <div className='d-flex align-center justify-content-md-between  flex-md-row flex-column align-items-center text-bold py-3'>
+          <div className='d-flex align-center justify-content-md-between  flex-md-row flex-column align-items-center text-bold py-3'>
 
            <div className='font-f'><span className='logo-clr'><IoLogoDropbox/></span> Quantity:<span className='clr'>{quantity}</span></div>
            <div className='font-f'><span className='logo-clr'><RiAccountPinBoxFill/></span> Supplier:{supplier}</div>

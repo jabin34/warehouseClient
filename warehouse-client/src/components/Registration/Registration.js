@@ -25,8 +25,8 @@ const Registration = () => {
     createUserWithEmailAndPassword(email,password);
   }
     return (
-        <div className='container  w-50 mx-auto'>
-            <h3 className='text-center'>Register here</h3>
+        <div className='container  w-70 mx-auto pt-3'>
+            <h3 className='text-center'>Register Here</h3>
         <Form className=" px-5" onSubmit={handleCreateUser}>
         <Form.Group className="mb-3" controlId="formGroupName">
           <Form.Label>Name</Form.Label>
@@ -40,7 +40,7 @@ const Registration = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control ref={passwordRef} type="password" placeholder="Password" />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button  className='custom-button border-0 rounded text-center px-5' type="submit">
          Register
         </Button>
         <p>Already have an account?<span className='text-danger'><Link to='/login'>Login here</Link></span></p>

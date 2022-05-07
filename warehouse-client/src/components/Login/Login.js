@@ -42,8 +42,8 @@ const Login = () => {
    
   }
     return (
-      <div className="container w-50 mx-auto p-1">
-        <h3 className='text-center'>Login here</h3>
+      <div className="container w-70 mx-auto p-4">
+        <h3 className='text-center'>Please Login Here</h3>
         <Form className="w-100 px-5" onSubmit={handleLogin}>
         <Form.Group className="mb-3" controlId="formGroupEmail">
           <Form.Label>Email address</Form.Label>
@@ -53,7 +53,7 @@ const Login = () => {
           <Form.Label>Password</Form.Label>
           <Form.Control ref={passwordRef} type="password" placeholder="Password" />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button className='custom-button border-0 rounded text-center px-5' type="submit">
           Login
         </Button>
         <p>Forgot password?<Button variant="link" onClick={() => {
