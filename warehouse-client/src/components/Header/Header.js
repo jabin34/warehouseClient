@@ -15,7 +15,7 @@ const Header = () => {
     navigate('/login');
   }
     return (
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"  sticky="top" >
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark"  sticky="top"  className='back-drop hover'>
         <Container>
         <Navbar.Brand as={Link} to="/">
         <img

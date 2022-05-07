@@ -1,0 +1,21 @@
+.back-drop{
+    background: rgba(0, 0, 0, 0.5); 
+}
+.img-container{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.top-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .txt-color{
+      color: chocolate;
+      font-size: .9rem;
+      font-weight: bold;
+      border-left: 6px solid chocolate;
+      padding-left: 5px;
+  }

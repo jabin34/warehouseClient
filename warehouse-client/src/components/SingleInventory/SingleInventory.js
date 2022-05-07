@@ -11,8 +11,8 @@ const SingleInventory = ({item}) => {
   }
     return (
       
-      <Col >
-      <Card className='border-0'>
+      <Col>
+      <Card className='border-0 '>
         <Card.Img variant="top" src={img}  />
         <Card.Body>
           <div className='d-flex align-center justify-content-between align-items-center text-bold p-1'>

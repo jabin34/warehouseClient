@@ -1,0 +1,27 @@
+.text-orange{
+color: chocolate;
+}
+.font-size{
+    font-size: 24px;
+}
+.font-sear{
+    font-size: 12px;
+    margin-left: 5px;
+    font-weight: bolder;
+}
+.btn-color{
+    background-color: chocolate!important;
+    border: none;
+}
+.icon{
+    font-size: 36px;
+    color: #453f3f;
+    height: 84px;
+    width: 84px;
+    text-align: center;
+    line-height: 84px;
+    border: 1px dashed #be4848;
+    border-radius: 50%;
+    margin-bottom: 17px;
+    transition: .3s linear;
+}

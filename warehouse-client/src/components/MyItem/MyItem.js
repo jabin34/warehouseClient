@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
+import { Card } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -32,8 +33,29 @@ const MyItem = () => {
     getItems();  
     },[user]);
     return (
-        <div>
+        <div className='container'>
            Myitem {item.length}
+           {
+               item.map(data=> <Card className='m-2' body key={data._id}>
+                   
+                   <div className='d-flex align-items-center  justify-content-between'>
+                   <div className='d-flex'>
+                   <img className='rounded align-middle' src={data.img} width={120} height={80} alt="img"/>
+                   <div className='mx-1'>
+                   <h6 className="fw-bold">{data.name}</h6>
+                    <p className='m-0 font text-muted fw-bold'>Quantity: {data.quantity}</p>
+                    <p className=' m-0 font text-muted fw-bold'>Supplier: {data.supplier}</p>
+                    <p className=' m-0 font text-muted fw-bold'>Supplier: {data.desc}</p>
+                   </div>
+                   </div>
+                   
+                   <h4>${data.price}</h4>
+                   
+                   </div>
+                   
+                   </Card>)
+           }
+          
         </div>
     );
 };
