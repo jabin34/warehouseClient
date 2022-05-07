@@ -5,8 +5,8 @@ import { GiSteeringWheel } from "react-icons/gi";
 const Feature = () => {
   return (
     <div className="container p-3">
-      <div class="text-center mb-70">
-        <h2 class="title p-2">Exclusive Car Featured</h2>
+      <div class="mb-5">
+        <h3 class=" fw-bold border-4 p-2 border-bottom border-warning mb-3">Exclusive Car Feature</h3>
       </div>
       <div class="row align-items-center align-items-xl-start">
         <div class="col-xl-3 col-lg-4 col-md-6">

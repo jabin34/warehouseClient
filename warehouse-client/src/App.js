@@ -14,9 +14,10 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ItemDetails from './components/ItemDetails/ItemDetails';
 import AddItem from './components/AddItem/AddItem';
+import Footer from './components/Footer/Footer';
 function App() {
   return (
-    <div >
+    <div className='position-relative '>
       <Header/>
      <Routes>
       <Route path="/" element={<Home/>}/>
@@ -31,6 +32,7 @@ function App() {
         <Route path="*" element={<NotFound/>}/>
     </Routes>
     <ToastContainer/>
+    <Footer/>
     </div>
   );
 }
