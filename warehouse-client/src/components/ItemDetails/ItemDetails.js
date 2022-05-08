@@ -9,7 +9,7 @@ const ItemDetails = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:4000/inventory/${id}`;
+    const url = `https://pacific-tor-79361.herokuapp.com/inventory/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((item) => {
@@ -27,7 +27,7 @@ const ItemDetails = () => {
       setQty(newQty);
     }
     //console.log(newQty);
-    const url = `http://localhost:4000/inventory/${id}`;
+    const url = `https://pacific-tor-79361.herokuapp.com/inventory/${id}`;
     fetch(url, {
       method: "put",
       headers: {
@@ -48,7 +48,7 @@ const ItemDetails = () => {
     let newQty = parseInt(addQty) + parseInt(qtyRef.current.value);
     //console.log(qtyadd);
     setQty(newQty);
-    const url = `http://localhost:4000/inventory/${id}`;
+    const url = `https://pacific-tor-79361.herokuapp.com/inventory/${id}`;
     fetch(url, {
       method: "put",
       headers: {
