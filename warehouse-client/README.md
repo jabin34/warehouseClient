@@ -1,7 +1,8 @@
 # Project Name :Carnation
 #### Car Warehouse Software
-# Live link:
-
+# Live link: https://wirehouse-e5bc6.web.app/
+# Server link: https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-jabin34
+# Client side link: https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-jabin34
 ### Project Description:
 * warehouse/inventory management websites.
 * Home page contain a header , banner, items ,serach car ,Car feature section.

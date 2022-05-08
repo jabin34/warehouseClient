@@ -61,6 +61,7 @@ const ItemDetails = () => {
   };
   return (
     <div className="container p-5 mt-3">
+      <h2 className="text-center p-3">Product Details</h2>
       <div className="row">
         <div className="col-md-6">
           <Col>
